@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # Only run if the person who pushed the tag (or triggered the run) is you
-    if: ${{ github.actor == 'codedmap' }}
+    if: ${{ github.actor == 'codedmap' || github.actor == 'kunal0621' }}
 
     steps:
       - name: Checkout repository
