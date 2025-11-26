@@ -1,0 +1,50 @@
+name: Publish to npm (tag releases, restricted)
+
+# Triggers on tag pushes like v1.2.3
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  # Optional manual trigger (you can use it from Actions -> Run workflow)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    # Only run if the person who pushed the tag (or triggered the run) is you
+    if: ${{ github.actor == 'codedmap' || github.actor == 'kunal0621' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Run tests (optional)
+        run: npm test || true
+
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          # Ensure package is public (scoped packages require --access public)
+          if grep -q '"name":' package.json && grep -q '@' package.json; then
+            npm publish --access public
+          else
+            npm publish
+          fi
