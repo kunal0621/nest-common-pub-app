@@ -1,0 +1,39 @@
+{
+  "name": "@codedmap/nest-common-pub-app",
+  "version": "1.0.0",
+  "description": "common module for nestjs pub app",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "connections",
+    "dto",
+    "decorators"
+  ],
+  "author": "Kunal Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.9",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.9",
+    "@nestjs/mongoose": "^11.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.3",
+    "mongoose": "^8.20.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  }
+}
