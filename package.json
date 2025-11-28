@@ -2,6 +2,7 @@
   "name": "@codedmap/nest-common-pub-app",
   "version": "1.0.1",
   "description": "common module for nestjs pub app",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
