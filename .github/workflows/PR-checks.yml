@@ -4,6 +4,8 @@ name: PR Checks
 on:
   pull_request:
     branches: [ "main" ]
+# Optional manual trigger (you can use it from Actions -> Run workflow)
+  workflow_dispatch:
 
 jobs:
   # Job 1: Run Linter
