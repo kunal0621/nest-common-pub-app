@@ -1,25 +1,25 @@
-import { IsString, IsMongoId, IsDate } from "class-validator";
-import { DocKeyMap } from "../decorators";
-import { Date } from "mongoose";
+import { IsString, IsMongoId, IsDate } from 'class-validator';
+import { DocKeyMap } from '../decorators';
+import { Date } from 'mongoose';
 
 export class CommentCreateDto {
     @IsString()
     @DocKeyMap('authorName')
-    name: string
+    name: string;
 
     @IsString()
     @DocKeyMap('authorEmail')
-    email: string
+    email: string;
 
     @IsMongoId()
     @DocKeyMap('movieId')
-    movieId: string
+    movie_id: string;
 
     @IsString()
     @DocKeyMap('commentText')
-    text: string
+    text: string;
 
     @IsDate()
     @DocKeyMap('commentDate')
-    date: Date
+    date: Date;
 }

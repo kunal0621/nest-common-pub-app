@@ -1,1 +1,1 @@
-export * from "./doc-key-map.decorators";
+export * from './doc-key-map.decorators';
