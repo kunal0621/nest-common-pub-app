@@ -10,9 +10,9 @@ import {
   Min,
   Max,
   IsMongoId,
-} from "class-validator";
-import { Type } from "class-transformer";
-import { DocKeyMap } from "../decorators";
+} from 'class-validator';
+import { Type } from 'class-transformer';
+import { DocKeyMap } from '../decorators';
 
 // ********************************START*******************************************
 // Here are the nested DTOs used in MovieDto and MovieCreateDto

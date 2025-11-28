@@ -8,4 +8,4 @@ export const COLLECTION_NAME = {
             theaters: 'theaters',
         }
     }
-}
+};

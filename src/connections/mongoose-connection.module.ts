@@ -1,6 +1,6 @@
-import { Global, Module, DynamicModule } from "@nestjs/common";
-import { ConfigModule, ConfigService } from "@nestjs/config";
-import { MongooseModule } from "@nestjs/mongoose";
+import { Global, Module, DynamicModule } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
 
 export interface MongooseConnectionModuleOptions {
     /**
@@ -38,14 +38,14 @@ export class MongooseConnectionModule {
         const {
             uri,
             dbName,
-            dbNameKey = "MONGODB_DB_NAME",
-            uriKey = "MONGODB_URI",
+            dbNameKey = 'MONGODB_DB_NAME',
+            uriKey = 'MONGODB_URI',
             connectionName,
         } = options;
 
         // If a direct `uri` is provided, validate it and use the synchronous `forRoot` API.
         // Otherwise fall back to the async factory that reads from ConfigService.
-        let mongooseForRoot: any;
+        let mongooseForRoot: DynamicModule;
         if (uri) {
             const trimmed = uri.trim();
             const isValidMongoUri = /^mongodb(\+srv)?:\/\//i.test(trimmed);
