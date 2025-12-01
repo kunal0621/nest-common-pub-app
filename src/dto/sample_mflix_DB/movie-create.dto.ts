@@ -12,7 +12,7 @@ import {
   IsMongoId,
 } from 'class-validator';
 import { Type } from 'class-transformer';
-import { DocKeyMap } from '../decorators';
+import { DocKeyMap } from '../../decorators';
 
 // ********************************START*******************************************
 // Here are the nested DTOs used in MovieDto and MovieCreateDto

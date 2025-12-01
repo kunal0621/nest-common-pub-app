@@ -9,7 +9,7 @@ import {
   ArrayMaxSize,
 } from 'class-validator';
 import { Type } from 'class-transformer';
-import { DocKeyMap } from '../decorators';
+import { DocKeyMap } from '../../decorators';
 
 class AddressDto {
   @IsString()

@@ -1,5 +1,5 @@
 import { IsString, IsEmail, MinLength, MaxLength } from 'class-validator';
-import { DocKeyMap } from '../decorators';
+import { DocKeyMap } from '../../decorators';
 
 export class UserCreateDto {
   @IsString()
