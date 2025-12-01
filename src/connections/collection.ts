@@ -7,5 +7,10 @@ export const COLLECTION_NAME = {
             sessions: 'sessions',
             theaters: 'theaters',
         }
+    },
+    PostgreSQL: {
+        sysbil: 'sysbil',
+        sysauth: 'sysauth',
+        session_management: 'session_management',
     }
 };
