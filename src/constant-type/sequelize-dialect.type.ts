@@ -1,0 +1,1 @@
+export type SupportedDialect = 'postgres' | 'mysql' | 'sqlite' | 'mariadb' | 'mssql';

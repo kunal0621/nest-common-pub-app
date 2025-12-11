@@ -1,5 +1,5 @@
 import { IsString, IsMongoId, IsDate } from 'class-validator';
-import { DocKeyMap } from '../decorators';
+import { DocKeyMap } from '../../decorators';
 import { Date } from 'mongoose';
 
 export class CommentCreateDto {
