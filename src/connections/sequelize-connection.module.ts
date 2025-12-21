@@ -1,6 +1,6 @@
 import { DynamicModule, Global, Module } from '@nestjs/common';
 import { SequelizeModule, SequelizeModuleOptions } from '@nestjs/sequelize';
-import { SequelizeConnectionModuleOptions } from '../interfaces/sequelize-option.interface';
+import { SequelizeConnectionModuleOptions } from '../interfaces/database-option.interface';
 
 @Global()
 @Module({})
@@ -16,6 +16,7 @@ export class SequelizeConnectionModule {
       password: options.password,
       database: options.database,
       name: options.connectionName,
+      pool: options.pool,
     };
 
     return {

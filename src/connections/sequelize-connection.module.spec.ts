@@ -13,6 +13,12 @@ describe('SequelizeConnectionModule', () => {
         database: 'db',
         dialect: 'postgres',
         connectionName: 'default',
+        pool: {
+          max: 5,
+          min: 0,
+          idle: 50000,
+          acquire: 3000,
+        }
       });
       expect(module).toBeDefined();
       expect(module.module).toBe(SequelizeConnectionModule);
