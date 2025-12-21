@@ -2,7 +2,7 @@
 import { Logger } from '@nestjs/common';
 import { SearchResponse } from '../interfaces/search-response.interface';
 import { MongooseBaseRepository } from './mongoose-base-repository';
-import { MongooseSearchPayload } from '../interfaces/mongoose-search-payload.interface';
+import { MongooseSearchPayload } from '../interfaces/search-payload.interface';
 
 /**
  * Base repository implementation for Mongoose models.

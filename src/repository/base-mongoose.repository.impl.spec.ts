@@ -2,7 +2,7 @@
 import { describe, it, expect } from '@jest/globals';
 import { BaseMongooseRepositoryImpl } from './base-mongoose.repository.impl';
 import { SearchResponse } from '../interfaces/search-response.interface';
-import { MongooseSearchPayload } from '../interfaces/mongoose-search-payload.interface';
+import { MongooseSearchPayload } from '../interfaces/search-payload.interface';
 
 class ConcreteRepo extends BaseMongooseRepositoryImpl<any> {
   constructor(model: any) {

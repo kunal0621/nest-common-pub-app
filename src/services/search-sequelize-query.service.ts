@@ -245,7 +245,7 @@ export class SearchQueryService {
         this.logger.debug(`Final include options: ${JSON.stringify(include)}`);
         this.logger.debug(`Final sort order: ${JSON.stringify(sortOrder)}`);
 
-        const count = await model.count({ where, include, distinct: true });
+        const count = await model.count({ where, include, distinct: include.length > 0 });
 
         const results = await model.findAll({
             where,

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { MongooseSearchPayload } from '../interfaces/mongoose-search-payload.interface';
+import { MongooseSearchPayload } from '../interfaces/search-payload.interface';
 import { SearchResponse } from '../interfaces/search-response.interface';
 
 /**
