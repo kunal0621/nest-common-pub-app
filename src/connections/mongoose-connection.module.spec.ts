@@ -7,6 +7,8 @@ describe('MongooseConnectionModule', () => {
       expect(() => {
         MongooseConnectionModule.register({
           uri: 'http://invalid-uri.com',
+          dbName: 'testdb',
+          connectionName: 'default',
         });
       }).toThrow(
         /Invalid MongoDB URI passed to MongooseConnectionModule/,
@@ -17,6 +19,7 @@ describe('MongooseConnectionModule', () => {
       const module = MongooseConnectionModule.register({
         uri: 'mongodb://localhost:27017',
         dbName: 'testdb',
+        connectionName: 'default',
       });
       expect(module).toBeDefined();
       expect(module.module).toBe(MongooseConnectionModule);
@@ -27,6 +30,7 @@ describe('MongooseConnectionModule', () => {
       const module = MongooseConnectionModule.register({
         uri: 'mongodb+srv://user:pass@host.mongodb.net',
         dbName: 'testdb',
+        connectionName: 'default',
       });
       expect(module).toBeDefined();
     });
